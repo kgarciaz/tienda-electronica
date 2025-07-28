@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Agregar Cliente</title>
+    <script>
+      function validarCliente() {
+        const nombre = document.forms["clienteForm"]["nombre"].value.trim();
+        const email = document.forms["clienteForm"]["email"].value.trim();
+        const direccion = document.forms["clienteForm"]["direccion"].value.trim();
+
+        if (nombre === "" || email === "" || direccion === "") {
+          alert("Todos los campos son obligatorios.");
+          return false;
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert("Ingrese un email válido.");
+          return false;
+        }
+        return true;
+      }
+    </script>
+</head>
+<body>
+    <h2>Agregar Cliente</h2>
+    <form name="clienteForm" action="procesar_cliente.php" method="post" onsubmit="return validarCliente()">
+        <label>Nombre:</label><br />
+        <input type="text" name="nombre" /><br /><br />
+
+        <label>Email:</label><br />
+        <input type="text" name="email" /><br /><br />
+
+        <label>Dirección:</label><br />
+        <textarea name="direccion" rows="3" cols="40"></textarea><br /><br />
+
+        <input type="submit" value="Agregar Cliente" />
+    </form>
+</body>
+</html>

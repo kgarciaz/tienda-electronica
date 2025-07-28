@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar Compra</title>
+</head>
+<body>
+  <h2>Registrar Compra</h2>
+  <form action="procesar_compra.php" method="post">
+    <label>ID Cliente:</label><br>
+    <input type="number" name="id_cliente" required><br><br>
+
+    <label>ID Producto:</label><br>
+    <input type="number" name="id_producto" required><br><br>
+
+    <label>Cantidad:</label><br>
+    <input type="number" name="cantidad" min="1" required><br><br>
+
+    <input type="submit" value="Registrar Compra">
+  </form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Agregar Producto</title>
+    <script>
+      function validarProducto() {
+        const nombre = document.forms["productoForm"]["nombre"].value.trim();
+        const descripcion = document.forms["productoForm"]["descripcion"].value.trim();
+        const precio = document.forms["productoForm"]["precio"].value;
+        const stock = document.forms["productoForm"]["stock"].value;
+
+        if (nombre === "" || descripcion === "" || precio === "" || stock === "") {
+          alert("Todos los campos son obligatorios.");
+          return false;
+        }
+        if (isNaN(precio) || precio <= 0) {
+          alert("Ingrese un precio válido mayor que cero.");
+          return false;
+        }
+        if (!Number.isInteger(Number(stock)) || stock < 0) {
+          alert("Ingrese un stock válido (entero igual o mayor a cero).");
+          return false;
+        }
+        return true;
+      }
+    </script>
+</head>
+<body>
+    <h2>Agregar Producto</h2>
+    <form name="productoForm" action="procesar_producto.php" method="post" onsubmit="return validarProducto()">
+        <label>Nombre:</label><br />
+        <input type="text" name="nombre" /><br /><br />
+
+        <label>Descripción:</label><br />
+        <textarea name="descripcion" rows="4" cols="40"></textarea><br /><br />
+
+        <label>Precio:</label><br />
+        <input type="text" name="precio" /><br /><br />
+
+        <label>Stock:</label><br />
+        <input type="number" name="stock" min="0" /><br /><br />
+
+        <input type="submit" value="Agregar Producto" />
+    </form>
+</body>
+</html>

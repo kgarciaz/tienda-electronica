@@ -1,0 +1,117 @@
+/*Estilos para contenedor de búsqueda*/
+.search-container {
+ text-align: center;
+ margin-top: 20px;
+}
+
+/*Resultados*/
+#results-container {
+  background-color: #f8f8f8;
+  border: 0cm solid #ccc;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/*Estilos para notificaciones*/
+.alerta {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #c3e6cb;
+  width: 80%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/*Estado del carrito*/
+#cart-status {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/*Contenedor del formulario de reseña*/
+.review-container {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.review-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.review-container input[type="text"],
+.review-container select,
+.review-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.review-container input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.review-container input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/*Contenedor del formulario de pedido*/
+.pedido-container {
+    background-color: #e9f7fe;
+    border: 1px solid #bde5f8;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.pedido-container h2 {
+    text-align: center;
+    color: #005c8a;
+}
+
+.pedido-container input[type="text"],
+.pedido-container input[type="number"],
+.pedido-container select,
+.pedido-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.pedido-container input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pedido-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
